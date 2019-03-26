@@ -11,7 +11,7 @@ import java.sql.Time;
 
 /**
  *
- * @author Italo Marcius
+ * @author Name
  */
 public class Flight {
     
