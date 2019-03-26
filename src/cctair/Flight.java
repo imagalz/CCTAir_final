@@ -64,16 +64,8 @@ public class Flight {
         return departureTime;
     }
 
-    public void setDepartureTime(Time departureTime) {
-        this.departureTime = departureTime;
-    }
-
     public Time getArrivalTime() {
         return arrivalTime;
-    }
-
-    public void setArrivalTime(Time arrivalTime) {
-        this.arrivalTime = arrivalTime;
     }
 
     public String getFlightDate() {
@@ -94,8 +86,29 @@ public class Flight {
         this.plane = plane;
     }
     
-    
-    
+    //update arrivalTime
+   public void schedule(String arrivalTime){
+   this.arrivalTime = this.arrivalTime;
+   
+   }
+   
+   /**
+    * 
+    * @param arrivalTime
+    * @param departureTime 
+    *  c. Use the second version of the schedule method to set the time schedule for a flight.
+    * d. Use the first version of the schedule method to update the arrival time for a flight in the list. 
+    */
+   
+   //set time schedule for a flight
+   //Change  type Time to Sring
+   public void schedule(Time arrivalTime, Time departureTime){
+       
+       this.arrivalTime = arrivalTime;
+       this.departureTime = this.departureTime;
+       
+   }
+        
     
     
     
