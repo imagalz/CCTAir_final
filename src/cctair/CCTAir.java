@@ -21,7 +21,7 @@ public class CCTAir {
         
         //test
         Flight f = new Flight("Dublin","Cidade del Mexico","05/10/2019");
-        f.setPlane(new AirPlane("Boeing","707",300,"Fabricio"));
+        f.setPlane(new AirPlane("Fabricio","Boeing","707",300));
         System.out.println(f.toString());
         
     }
