@@ -5,6 +5,7 @@
  */
 package cctair;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,6 +19,23 @@ public class CCTAir {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        ArrayList<AirPlane> airplanes = new ArrayList();
+        airplanes.add(new AirPlane("", "Boeing", "737", 215));
+        airplanes.add(new AirPlane("", "Boeing", "747", 350));
+        airplanes.add(new AirPlane("", "Boeing", "767", 300));
+        airplanes.add(new AirPlane ("", "Airbus", "350", 200));
+        airplanes.add(new AirPlane ("", "Airbus", "450", 400));
+        airplanes.add(new AirPlane ("", "Airbus", "308", 250));
+
+        ArrayList<Pilot> pilots = new ArrayList();
+        pilots.add(new Pilot("Fabricio", "A"));
+        pilots.add(new Pilot("Fermin", "A"));
+        pilots.add(new Pilot("Aldana", "A"));
+        pilots.add(new Pilot("Celia", "B"));
+        pilots.add(new Pilot("Italo", "B"));
+        pilots.add(new Pilot("Welligton", "B"));
+        
         
         //test
         Flight f = new Flight("Dublin","Cidade del Mexico","05/10/2019");

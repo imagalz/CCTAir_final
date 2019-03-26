@@ -16,8 +16,15 @@ public class Pilot {
    */
     
    String name;
-   ArrayList <String> rating = new ArrayList <String>();
+   String rating;
 
+    public Pilot(String name, String rating) {
+        this.name = name;
+        this.rating = rating;
+    }
+   
+   
+   
     public String getName() {
         return name;
     }
@@ -26,18 +33,14 @@ public class Pilot {
         this.name = name;
     }
 
-    public ArrayList<String> getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(ArrayList<String> rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
-    public Pilot() {
-        
-    }
-   
 
     
 }
