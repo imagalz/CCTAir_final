@@ -6,37 +6,37 @@
 package cctair;
 
 import java.sql.Time;
+import java.util.Date;
+import java.time.LocalDateTime;
 
 
 
 /**
  *
- * @author Name
+ * @author Italo Marcius
  */
 public class Flight {
-    
-    /**
-     * Store data for the Flight
-     * origin and destination 
-     * departure time (e.g. “10:10”)
-     * arrival time (e.g “13:30”)
-     * date of flight (e.g. “06/03/2019”)
-     * aircraft assigned (this should be an object);
-     */
-    
-    private String origin;
-    private String destination;
-    private Time departureTime;
-    private Time arrivalTime;
-    private String flightDate;
-    private AirPlane plane;// - aircraft assigned (this should be an object);
-
-    /**
-     * A constructor which accepts data 
-     * (except for departure time and arrival time), 
-     * in the order listed above and initialises 
-     * each relevant instance variable accordingly.
-     */  
+/**
+ * Store data for the Flight
+ - origin and destination 
+ - departure time (e.g. “10:10”)
+ - arrival time (e.g “13:30”)
+ - date of flight (e.g. “06/03/2019”)
+ - aircraft assigned (this should be an object);
+ */
+ String origin;
+ String destination;
+ Time departureTime;
+ Time arrivalTime;
+ String flightDate;
+ AirPlane Plane = new AirPlane();// - aircraft assigned (this should be an object);
+ 
+  /**
+  * A constructor which accepts data 
+  * (except for departure time and arrival time), 
+  * in the order listed above and initializes 
+  * each relevant instance variable accordingly.
+  */  
 
     public Flight(String origin, String destination, String flightDate) {
         this.origin = origin;
@@ -64,8 +64,16 @@ public class Flight {
         return departureTime;
     }
 
+    public void setDepartureTime(Time departureTime) {
+        this.departureTime = departureTime;
+    }
+
     public Time getArrivalTime() {
         return arrivalTime;
+    }
+
+    public void setArrivalTime(Time arrivalTime) {
+        this.arrivalTime = arrivalTime;
     }
 
     public String getFlightDate() {
@@ -79,36 +87,15 @@ public class Flight {
     }
 
     public AirPlane getPlane() {
-        return plane;
+        return Plane;
     }
 
-    public void setPlane(AirPlane plane) {
-        this.plane = plane;
+    public void setPlane(AirPlane Plane) {
+        this.Plane = Plane;
     }
     
-    //update arrivalTime
-   public void schedule(String arrivalTime){
-   this.arrivalTime = this.arrivalTime;
-   
-   }
-   
-   /**
-    * 
-    * @param arrivalTime
-    * @param departureTime 
-    *  c. Use the second version of the schedule method to set the time schedule for a flight.
-    * d. Use the first version of the schedule method to update the arrival time for a flight in the list. 
-    */
-   
-   //set time schedule for a flight
-   //Change  type Time to Sring
-   public void schedule(Time arrivalTime, Time departureTime){
-       
-       this.arrivalTime = arrivalTime;
-       this.departureTime = this.departureTime;
-       
-   }
-        
+    
+    
     
     
     
@@ -131,9 +118,9 @@ public class Flight {
                 + "\nDeparture Time:" + departureTime 
                 + "\nArrival Time:" +  arrivalTime 
                 + "\nPlane Information >> " 
-                + "Aircraft " + plane.getBrand() + " " + plane.getModel() 
-                + " Capacity: " + plane.getCapacity() 
-                + " seats " + "Pilot: " + plane.getPilot();
+                + "Aircraft " + Plane.getBrand() + " " + Plane.getModel() 
+                + " Capacity: " + Plane.getCapacity() 
+                + " seats " + "Pilot: " + Plane.getPilot();
                 
     }
     
