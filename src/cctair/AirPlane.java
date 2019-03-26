@@ -11,10 +11,10 @@ package cctair;
  */
 public class AirPlane {
     
-    String brand;
-    String model;
-    int capacity;
-    String pilot;
+    private String brand;
+    private String model;
+    private int capacity;
+    private String pilot;
 
     public AirPlane(String brand, String model, int capacity, String pilot) {
         this.brand = brand;
@@ -57,6 +57,4 @@ public class AirPlane {
     public void assignPilot(String pilot) {
         this.pilot = pilot;
     }
-    
-    
 }
