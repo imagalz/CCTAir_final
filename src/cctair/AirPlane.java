@@ -9,52 +9,22 @@ package cctair;
  *
  * @author Italo Marcius
  */
-public class AirPlane {
-    
-    private String brand;
-    private String model;
-    private int capacity;
-    private String pilot;
+public class AirPlane extends Aircraft {
+        
+    String pilotname;
 
-    public AirPlane(String brand, String model, int capacity, String pilot) {
-        this.brand = brand;
-        this.model = model;
-        this.capacity = capacity;
-        this.pilot = pilot;
-    }
-
-    public AirPlane() {
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public AirPlane(String pilotname, String brand, String model, int capacity) {
+        super(brand, model, capacity);
+        this.pilotname = pilotname;
     }
 
     public String getPilot() {
-        return pilot;
+        return pilotname;
     }
 
-    public void assignPilot(String pilot) {
-        this.pilot = pilot;
+    public void assignPilot(String pilotname) {
+        this.pilotname = pilotname;
     }
+    
+    
 }
