@@ -5,6 +5,8 @@
  */
 package cctair;
 
+import java.sql.Time;
+
 /**
  *
  * @author Italo Marcius
@@ -51,16 +53,26 @@ public class setup {
         return p;
 
     
-    
-    
     }
     
      public void createFlights(){
      
-         
-     
-     
-     
+             Flight flightList[] =  new Flight[30];
+             
+            String flightBrand[] = {"Boeing", "Airbus"}; 
+            String flightBoeingModel[] = {"737","747","767"}; 
+            String flightAirbusModel[] = {"350","450","308"}; 
+            int flightBoingCapacity[] = {350,300, 200};
+            int flightAirbusCapacity[] = {200,400,250};
+            //ArrayList<Pilot> flightPilotName = new ArrayList<Pilot>();
+            String flightPilotName[] = {""}; 
+            String flightOrigin[] = {};
+            String flightDestination[] = {};
+        //    Time flightdepartureTime[] = {};
+        //    Time flightarrivalTime[] = {};
+        //    String flightDate [] = {};     
+
+
      }
     
     
