@@ -30,7 +30,6 @@ public class Flight {
  Time arrivalTime;
  String flightDate;
  AirPlane Plane = new AirPlane("","","",500);// - aircraft assigned (this should be an object);
- 
   /**
   * A constructor which accepts data 
   * (except for departure time and arrival time), 

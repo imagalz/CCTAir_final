@@ -20,6 +20,25 @@ public class CCTAir {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        System.out.println("-------------- CCTAir -------------");
+        System.out.println("Welcome to the CCTAir...\n");
+        System.out.println("Please, wait until the database is being preparated...\n");
+        System.out.println("...\n");
+        System.out.println("...\n");
+        System.out.println("...\n");
+        
+        
+        setup s = new setup();
+        System.out.println("--------- Setup of Database ---------");        
+        System.out.println("...\n");
+        System.out.println("...\n");
+        System.out.println("...\n");
+        
+        s.createAircrafts();
+        s.createPilots();
+                
+        
+        /* moving it to setup class
         ArrayList<AirPlane> airplanes = new ArrayList();
         airplanes.add(new AirPlane("", "Boeing", "737", 215));
         airplanes.add(new AirPlane("", "Boeing", "747", 350));
@@ -35,6 +54,7 @@ public class CCTAir {
         pilots.add(new Pilot("Celia", "B"));
         pilots.add(new Pilot("Italo", "B"));
         pilots.add(new Pilot("Welligton", "B"));
+        */
         
         
         //test
