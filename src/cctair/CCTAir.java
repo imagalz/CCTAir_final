@@ -64,8 +64,7 @@ public class CCTAir {
         }
        Scanner inputUserName = new Scanner(System.in);
        System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
-       String userName = inputUserName.nextLine(); 
-               
+       String userName = inputUserName.nextLine();       
    
  
        s.CreateUserFlight(userName);
