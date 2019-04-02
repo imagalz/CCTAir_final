@@ -161,12 +161,9 @@ public class setup {
 
 
                 Random r = new Random();
-                //date
+
                 int userrfd = r.nextInt(1);
-                //random flight Origin
-                //int rfo = r.nextInt(6);
-                //random flight Destination
-                //int rpd = r.nextInt(6);
+
                 String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
                 String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
                 //random flight Departure Time
@@ -178,8 +175,11 @@ public class setup {
                 //random flight pilot
                 int rp = r.nextInt(6);
            
-                System.out.println("The time generate for your flight was" + flightDepartureTime[rfdt]
-                + "");
+                System.out.println("The time avaiable for your flight was:\n"
+                        + "- Departure: " + flightDepartureTime[rfdt]
+                        + "\n- Arrival: " + flightarrivalTime[rfat]);
+                
+
             
                 Flight newFlight = new Flight(userOrigin, userDestination, userDate);
                 newFlight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
