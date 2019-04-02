@@ -42,7 +42,7 @@ public class CCTAir {
         
         
         
-        System.out.println("--------- JEwjszdkhgsiycy ---------\n\n\n\n");  
+        System.out.println("--------- oioioioioioi ---------\n\n\n\n");  
         //System.out.println(s.getFlightList());
         
         
