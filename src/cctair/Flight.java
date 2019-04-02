@@ -26,10 +26,10 @@ public class Flight {
  */
  String origin;
  String destination;
- Time departureTime;
- Time arrivalTime;
+ String  departureTime;
+ String arrivalTime;
  String flightDate;
- AirPlane Plane = new AirPlane("","","",500);// - aircraft assigned (this should be an object);
+ AirPlane Plane = new AirPlane("","",500);// - aircraft assigned (this should be an object);
   /**
   * A constructor which accepts data 
   * (except for departure time and arrival time), 
@@ -59,21 +59,17 @@ public class Flight {
         this.destination = destination;
     }
 
-    public Time getDepartureTime() {
+    public String getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(Time departureTime) {
-        this.departureTime = departureTime;
-    }
 
-    public Time getArrivalTime() {
+
+    public String getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(Time arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
+
 
     public String getFlightDate() {
         return flightDate;
@@ -94,7 +90,19 @@ public class Flight {
     }
     
     
-    
+   public void schedule(String arrivalTime) {
+       
+       this.arrivalTime = arrivalTime;               
+      
+   }
+   
+   public void schedule(String arrivalTime, String departureTime){
+        
+        this.arrivalTime = arrivalTime; 
+        this.departureTime = departureTime; 
+   
+   }
+ 
     
     
     
@@ -110,7 +118,7 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "* ===== Flight Information: ===== *\n"
+        return "\n\n* ===== Flight Information: ===== *\n"
                 + "Date:" + flightDate
                 + "\nFrom:" + origin 
                 + "\nTo:" + destination 

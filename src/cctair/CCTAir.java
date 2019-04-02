@@ -34,8 +34,24 @@ public class CCTAir {
         System.out.println("...\n");
         System.out.println("...\n");
         
-        s.createAircrafts();
-        s.createPilots();
+        
+        
+        s.setP(s.createPilots());
+        s.setAp(s.createAircrafts());
+        s.createFlights();
+        
+        
+        
+        System.out.println("--------- JEwjszdkhgsiycy ---------\n\n\n\n");  
+        //System.out.println(s.getFlightList());
+        
+        
+        for (int i=0; i<s.getFlightList().size();i++){
+            
+            System.out.println(s.getFlightList().get(i).toString());
+        
+        }
+        
                 
         
         /* moving it to setup class
@@ -57,10 +73,10 @@ public class CCTAir {
         */
         
         
-        //test
+        /*test
         Flight f = new Flight("Dublin","Cidade del Mexico","05/10/2019");
         f.setPlane(new AirPlane("Fabricio","Boeing","707",300));
-        System.out.println(f.toString());
+        System.out.println(f.toString());*/
         
     }
     

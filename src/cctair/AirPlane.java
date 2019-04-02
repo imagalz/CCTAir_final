@@ -13,9 +13,9 @@ public class AirPlane extends Aircraft {
         
     String pilotname;
 
-    public AirPlane(String pilotname, String brand, String model, int capacity) {
+    public AirPlane(String brand, String model, int capacity) {
         super(brand, model, capacity);
-        this.pilotname = pilotname;
+        this.pilotname = "Not set yet";
     }
 
     public String getPilot() {
@@ -25,6 +25,14 @@ public class AirPlane extends Aircraft {
     public void assignPilot(String pilotname) {
         this.pilotname = pilotname;
     }
+
+    @Override
+    public String toString() {
+        return "Aircraft : " + super.brand + " " + super.model + "Capacity: "+ super.capacity + "seats | Pilot: " + pilotname;
+    }
+    
+//    /Aircraft : <<insert make>> <<insert model>> Capacity: ___ seats Pilot: _____
+    
     
     
 }
