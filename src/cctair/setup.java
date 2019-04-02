@@ -128,19 +128,18 @@ public class setup {
         
     }
      
-     public void CreateUserFlight(){
+     public void CreateUserFlight(String userName){
 
-        Scanner inputUserName = new Scanner(System.in);
+
         Scanner inputUserNumberOfFlight = new Scanner(System.in); 
-        System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
 
-        String userName = inputUserName.nextLine(); 
+        
 
         System.out.println( userName + ", how  many flights do you want to create?");
 
         int userNumber = inputUserNumberOfFlight.nextInt(); 
-             
-         for (int i = 0; i < userNumber; i++) {
+        if(userNumber<=5){
+            for (int i = 0; i < userNumber; i++) {
             
 
             Scanner inputUserOrigin = new Scanner(System.in);
@@ -148,11 +147,11 @@ public class setup {
             Scanner inputUserDate = new Scanner(System.in);
 
             System.out.println("\n>>>>>> Flight number "+(i+1));
-            System.out.println("\n- Enter the origin country");
+            System.out.println("\n- Enter the origin city");
             
             String userOrigin = inputUserOrigin.nextLine();
 
-            System.out.println("\n- Enter the destination country");
+            System.out.println("\n- Enter the destination city");
             
             String userDestination = inputUserDestination.nextLine();
             
@@ -189,7 +188,16 @@ public class setup {
 
                 //flightList[i] = f;
             }
+        } else {
+                    System.out.println("Please, you are allow to create up to 5 flights, "
+                            + "enter your number again");
+                    CreateUserFlight(userName);
+                    }
+        
+        }
+             
+         
      }         
      
 
-}
+

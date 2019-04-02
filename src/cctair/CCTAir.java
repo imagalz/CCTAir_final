@@ -7,6 +7,7 @@ package cctair;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
@@ -52,7 +53,7 @@ public class CCTAir {
         
         
         
-        System.out.println("--------- oioioioioioi ---------\n\n\n\n");  
+        System.out.println("\n\n\n\n");  
         //System.out.println(s.getFlightList());
         
         
@@ -61,9 +62,13 @@ public class CCTAir {
             System.out.println(s.getFlightList().get(i).toString());
         
         }
-        
-        
-       s.CreateUserFlight();
+       Scanner inputUserName = new Scanner(System.in);
+       System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
+       String userName = inputUserName.nextLine(); 
+               
+   
+ 
+       s.CreateUserFlight(userName);
        System.out.println("\n\n\n--------- Celias ---------\n\n\n\n");  
         //System.out.println(s.getFlightList());
         
