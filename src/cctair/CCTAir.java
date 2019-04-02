@@ -52,6 +52,17 @@ public class CCTAir {
         
         }
         
+        
+       s.CreateUserFlight();
+       System.out.println("\n\n\n--------- Celias ---------\n\n\n\n");  
+        //System.out.println(s.getFlightList());
+        
+        
+        for (int i=0; i<s.getFlightList().size();i++){
+            
+            System.out.println(s.getFlightList().get(i).toString());
+        
+        }
         //      
         
  
