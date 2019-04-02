@@ -147,16 +147,16 @@ public class setup {
             Scanner inputUserDestination = new Scanner(System.in);
             Scanner inputUserDate = new Scanner(System.in);
 
-            System.out.println("\nFlight number "+(i+1));
-            System.out.println("\nEnter the origin country");
+            System.out.println("\n>>>>>> Flight number "+(i+1));
+            System.out.println("\n- Enter the origin country");
             
             String userOrigin = inputUserOrigin.nextLine();
 
-            System.out.println("Enter the destination country");
+            System.out.println("\n- Enter the destination country");
             
             String userDestination = inputUserDestination.nextLine();
             
-            System.out.println("Enter the flight date (Please use the format: dd/mm/yy)");
+            System.out.println("\n- Enter the flight date (Please use the format: dd/mm/yy)");
 
             String userDate = inputUserDate.nextLine();
 
