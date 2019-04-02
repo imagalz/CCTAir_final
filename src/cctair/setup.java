@@ -160,7 +160,6 @@ public class setup {
             String userDate = inputUserDate.nextLine();
 
 
-
                 Random r = new Random();
                 //date
                 int userrfd = r.nextInt(1);
@@ -178,7 +177,10 @@ public class setup {
                 int rap = r.nextInt(6);
                 //random flight pilot
                 int rp = r.nextInt(6);
-
+           
+                System.out.println("The time generate for your flight was" + flightDepartureTime[rfdt]
+                + "");
+            
                 Flight newFlight = new Flight(userOrigin, userDestination, userDate);
                 newFlight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
                 newFlight.setPlane(getAp()[rap]);
