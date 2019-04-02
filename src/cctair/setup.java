@@ -129,22 +129,34 @@ public class setup {
     }
      
      public void CreateUserFlight(){
+
+        Scanner inputUserName = new Scanner(System.in);
+        Scanner inputUserNumberOfFlight = new Scanner(System.in); 
+        System.out.println("Welcome to CCTAir! Please enter your full name");
+
+        String userName = inputUserName.nextLine(); 
+
+        System.out.println( inputUserName + "How  many flights do you want to create?");
+
+        int userNumber = inputUserNumberOfFlight.nextInt(); 
              
-         for (int i = 0; i < 5; i++) {
+         for (int i = 0; i < userNumber; i++) {
             
+
             Scanner inputUserOrigin = new Scanner(System.in);
             Scanner inputUserDestination = new Scanner(System.in);
             Scanner inputUserDate = new Scanner(System.in);
 
-            System.out.println("Welcome to CCTAir, from where are you flying?");
 
-            String userOrigin = inputUserOrigin.nextLine(); 
+            System.out.println("Enter the origin country");
+            
+            String userOrigin = inputUserOrigin.nextLine();
 
-            System.out.println("Where do you want to go");
-
+            System.out.println("Enter the destination country");
+            
             String userDestination = inputUserDestination.nextLine();
-
-            System.out.println("Whem do you want to flight?");
+            
+            System.out.println("Enter the flight date (Please use the format: dd/mm/yy)");
 
             String userDate = inputUserDate.nextLine();
 
