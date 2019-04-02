@@ -20,6 +20,16 @@ public class CCTAir {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        // Fancy and useless logo
+        System.out.println(" ______   ______  _____   ______   _\n" +
+                            "|  ____| |  ____||_   _| |  __  | |_|  _  __\n" +
+                            "| |      | |       | |   | |__| |  _  | |/__|\n" +
+                            "| |____  | |____   | |   |  __  | | | |  |\n" +
+                            "|______| |______|  |_|   |_|  |_| |_| |_ | ");        
+        
+        
+        
+        
         System.out.println("-------------- CCTAir -------------");
         System.out.println("Welcome to the CCTAir...\n");
         System.out.println("Please, wait until the database is being preparated...\n");
