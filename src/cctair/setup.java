@@ -127,11 +127,54 @@ public class setup {
         
     }
      
- 
+     public void CreateUserFlight(){
+             for (int i = 0; i < 5; i++) {
+        Scanner inputUserOrigin = new Scanner(System.in);
+        Scanner inputUserDestination = new Scanner(System.in);
+        Scanner inputUserDate = new Scanner(System.in);
+    
+        System.out.println("Welcome to CCTAir, from where are you flying?");
+        
+        String userOrigin = inputUserOrigin.nextLine(); 
+       
+        System.out.println("Where do you want to go");
+       
+        String userDestination = inputUserDestination.nextLine();
 
+        System.out.println("Whem do you want to flight?");
+        
+        String userDate = inputUserDate.nextLine();
+        
+          
+
+            Random r = new Random();
+            //date
+            int userrfd = r.nextInt(1);
+            //random flight Origin
+            //int rfo = r.nextInt(6);
+            //random flight Destination
+            //int rpd = r.nextInt(6);
+            String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
+            String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
+            //random flight Departure Time
+            int rfdt = r.nextInt(4);
+            //random flight Arrival Time
+            int rfat = r.nextInt(4);
+            //random flight airplane
+            int rap = r.nextInt(6);
+            //random flight pilot
+            int rp = r.nextInt(6);
+            
+            Flight newFlight = new Flight(userOrigin, userDestination, userDate);
+            newFlight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
+            newFlight.setPlane(getAp()[rap]);
+            newFlight.getPlane().assignPilot(getP()[rp].getName());
+            flightList.add(newFlight);
+
+    
+            //flightList[i] = f;
+        }
+     }         
      
-    
-    
-    
-    
+
 }
