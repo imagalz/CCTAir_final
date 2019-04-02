@@ -132,11 +132,11 @@ public class setup {
 
         Scanner inputUserName = new Scanner(System.in);
         Scanner inputUserNumberOfFlight = new Scanner(System.in); 
-        System.out.println("Welcome to CCTAir! Please enter your full name");
+        System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
 
         String userName = inputUserName.nextLine(); 
 
-        System.out.println( inputUserName + "How  many flights do you want to create?");
+        System.out.println( userName + ", how  many flights do you want to create?");
 
         int userNumber = inputUserNumberOfFlight.nextInt(); 
              
@@ -147,8 +147,8 @@ public class setup {
             Scanner inputUserDestination = new Scanner(System.in);
             Scanner inputUserDate = new Scanner(System.in);
 
-
-            System.out.println("Enter the origin country");
+            System.out.println("\nFlight number "+(i+1));
+            System.out.println("\nEnter the origin country");
             
             String userOrigin = inputUserOrigin.nextLine();
 
