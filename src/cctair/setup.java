@@ -145,7 +145,9 @@ public class setup {
             Scanner inputUserOrigin = new Scanner(System.in);
             Scanner inputUserDestination = new Scanner(System.in);
             Scanner inputUserDate = new Scanner(System.in);
+            Scanner inputUserDepartureTime = new Scanner(System.in);
 
+            
             System.out.println("\n>>>>>> Flight number "+(i+1));
             System.out.println("\n- Enter the origin city");
             
@@ -158,14 +160,19 @@ public class setup {
             System.out.println("\n- Enter the flight date (Please use the format: dd/mm/yy)");
 
             String userDate = inputUserDate.nextLine();
+            
+            System.out.println("Enter the departure time for your flight (Please use the format 24hs: 00:00");
+            
+            String userDepartureTime = inputUserDepartureTime.nextLine();
+            
 
 
                 Random r = new Random();
 
                 int userrfd = r.nextInt(1);
 
-                String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
-                String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
+                //String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
+                //String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
                 //random flight Departure Time
                 int rfdt = r.nextInt(4);
                 //random flight Arrival Time
@@ -175,17 +182,16 @@ public class setup {
                 //random flight pilot
                 int rp = r.nextInt(6);
            
-                System.out.println("The time avaiable for your flight was:\n"
-                        + "- Departure: " + flightDepartureTime[rfdt]
-                        + "\n- Arrival: " + flightarrivalTime[rfat]);
+                
+                
                 
 
             
                 Flight newFlight = new Flight(userOrigin, userDestination, userDate);
-                newFlight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
-                newFlight.setPlane(getAp()[rap]);
-                newFlight.getPlane().assignPilot(getP()[rp].getName());
-                flightList.add(newFlight);
+//                newFlight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
+//                newFlight.setPlane(getAp()[rap]);
+//                newFlight.getPlane().assignPilot(getP()[rp].getName());
+//                flightList.add(newFlight);
 
 
                 //flightList[i] = f;
