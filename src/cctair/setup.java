@@ -171,6 +171,14 @@ public class setup {
                     + "\n F - Airbus 450" );
 
             String userPlane = myScanner.nextLine();
+//            if (userPlane == "A"){
+//                userPlane = Airplane a2;
+//                
+//            } 
+            String grade;
+            grade = "";
+            System.out.println("This airplane is grade" + grade + "and its pilots are:" );
+
             
                 Random r = new Random();
 
