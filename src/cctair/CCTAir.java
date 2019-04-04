@@ -54,9 +54,6 @@ public class CCTAir {
         s.setP(s.createPilots());
         s.setAp(s.createAircrafts());
         s.createFlights();
-        
-        
-        
         System.out.println("\n\n\n\n");          
         
         for (int i=0; i<s.getFlightList().size();i++){
