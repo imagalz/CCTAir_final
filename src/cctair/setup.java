@@ -90,9 +90,9 @@ public class setup {
 //    public char AsignRates(){
 //        if (AirPlane[3].getCapacity => 300){ 
 //        return 'A';
+//        }
 //        else return 'B';
 //
-//     }
 //    }
 //      public double AsignRatesPilot() {
 //        switch (AsignRates()){
