@@ -30,13 +30,13 @@ public class CCTAir {
                             "|______| |______|  |_|   |_|  |_| |_| |_ | ");*/  
         
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" +
-"@ ______   ______  _____   ______   _ @@@@@@@@@\n" +
-"@|  ____| |  ____||_   _| |  __  | |_|  _  __ @\n" +
-"@| |      | |       | |   | |__| |  _  | |/__|@\n" +
-"@| |____  | |____   | |   |  __  | | | |  | @@@\n" +
-"@|______| |______|  |_|   |_|  |_| |_| |_ | @@@\n" +
-"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        
+        "@ ______   ______  _____   ______   _ @@@@@@@@@\n" +
+        "@|  ____| |  ____||_   _| |  __  | |_|  _  __ @\n" +
+        "@| |      | |       | |   | |__| |  _  | |/__|@\n" +
+        "@| |____  | |____   | |   |  __  | | | |  | @@@\n" +
+        "@|______| |______|  |_|   |_|  |_| |_| |_ | @@@\n" +
+        "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
         
         
         
@@ -44,56 +44,35 @@ public class CCTAir {
         System.out.println("Welcome to the CCTAir...\n");
         System.out.println("Please, wait until the database is being preparated...\n");
         System.out.println("...\n");
-        System.out.println("...\n");
-        System.out.println("...\n");
         
         
         setup s = new setup();
-        System.out.println("--------- Setup of Database ---------");        
-        System.out.println("...\n");
-        System.out.println("...\n");
-        System.out.println("...\n");
-        
+        System.out.println("-------- Setup of Database --------");        
+        System.out.println("...\n");      
         
         
         s.setP(s.createPilots());
         s.setAp(s.createAircrafts());
         s.createFlights();
-        
-        
-        
-        System.out.println("\n\n\n\n");  
-        //System.out.println(s.getFlightList());
-        
+        System.out.println("\n\n\n\n");          
         
         for (int i=0; i<s.getFlightList().size();i++){
             
             System.out.println(s.getFlightList().get(i).toString());
-        
         }
+      
        Scanner inputUserName = new Scanner(System.in);
        System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
        String userName = inputUserName.nextLine();       
    
  
        s.CreateUserFlight(userName);
-       System.out.println("\n\n\n--------- Celias ---------\n\n\n\n");  
-        //System.out.println(s.getFlightList());
         
-        
-        for (int i=0; i<s.getFlightList().size();i++){
+       for (int i=0; i<s.getFlightList().size();i++){
             
             System.out.println(s.getFlightList().get(i).toString());
         
         }
-        //      
-        
- 
-        
-        /*test
-        Flight f = new Flight("Dublin","Cidade del Mexico","05/10/2019");
-        f.setPlane(new AirPlane("Fabricio","Boeing","707",300));
-        System.out.println(f.toString());*/
         
     }
     

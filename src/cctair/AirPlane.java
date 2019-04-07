@@ -7,7 +7,7 @@ package cctair;
 
 /**
  *
- * @author Italo Marcius
+ * @author Italo Marcius, Celia De Leon
  */
 public class AirPlane extends Aircraft {
         
@@ -30,8 +30,7 @@ public class AirPlane extends Aircraft {
     public String toString() {
         return "Aircraft : " + super.brand + " " + super.model + "Capacity: "+ super.capacity + "seats | Pilot: " + pilotname;
     }
-    
-//    /Aircraft : <<insert make>> <<insert model>> Capacity: ___ seats Pilot: _____
+
     
     
     
