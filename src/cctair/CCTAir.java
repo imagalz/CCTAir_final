@@ -11,23 +11,17 @@ import java.util.Scanner;
 
 /**
  *
- * @author Italo Marcius
+ * @author 
+ * Main Class CCTAir
  */
 public class CCTAir {
 
-    /**test
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        // Fancy and useless logo
-        
-        /*System.out.println(" ______   ______  _____   ______   _\n" +
-                            "|  ____| |  ____||_   _| |  __  | |_|  _  __\n" +
-                            "| |      | |       | |   | |__| |  _  | |/__|\n" +
-                            "| |____  | |____   | |   |  __  | | | |  |\n" +
-                            "|______| |______|  |_|   |_|  |_| |_| |_ | ");*/  
+/**
+ * Airline Logo
+ */
+         
         
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" +
         "@ ______   ______  _____   ______   _ @@@@@@@@@\n" +
@@ -50,22 +44,34 @@ public class CCTAir {
         System.out.println("-------- Setup of Database --------");        
         System.out.println("...\n");      
         
+        /**
+         * Invoque methods to Create Pilots, Aircrafts and Flights from Setup Class
+         */
         
         s.setP(s.createPilots());
         s.setAp(s.createAircrafts());
         s.createFlights();
-        System.out.println("\n\n\n\n");          
+        System.out.println("\n\n\n\n");   
+        
+        /**
+         * User Flight Creation
+         */
         
         for (int i=0; i<s.getFlightList().size();i++){
             
             System.out.println(s.getFlightList().get(i).toString());
         }
+        /**
+         * Welcome the User
+         */
       
        Scanner inputUserName = new Scanner(System.in);
        System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
        String userName = inputUserName.nextLine();       
    
- 
+       /**
+        * Invoque method to allow the user to create up to 5 flights, Method name CreateUserFlight, located in Setup class
+        */
        s.CreateUserFlight(userName);
         
        for (int i=0; i<s.getFlightList().size();i++){

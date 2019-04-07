@@ -103,19 +103,10 @@ public class Flight {
    
    }
  
+/**
+ * Creating String to Board with Flight Information 
+ */
     
-    
-    
-    
-    
-//    Flight Information: 
-//Date: <<insert date of flight>> 
-//From: <<insert origin>> 
-//to <<insert destination>>
-// Departure time: <<insert departure time>> 
-//arrival time <<insert arrival time>> 
-// Plane Information: Aircraft : <<insert make>> <<insert model>> Capacity: ___ seats Pilot: _____
-
     @Override
     public String toString() {
         return "\n\n* ===== Flight Information: ===== *\n"
