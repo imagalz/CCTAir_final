@@ -97,18 +97,23 @@ public class setup {
     
     }
      
-     /**
-      * CheckRates methods for Plane and Pilots
-      * @return char A or B.
-      */
+/**
+ * CheckRates methods for Plane and Pilots
+ * Check Rates Plane
+ * @return char A or B depending on the capacity of the Airplane.
+ * 
+ */
 public char CheckRatesPlane(){
-   // Arrays.(array).indexOf(4);
     if (ap[1].getCapacity() >= 300){ 
       return 'A';
         }
     else return 'B';
 
     }
+/**
+ * Check the Rate for Pilot, searching in Array p[2]
+ * .gettingRatting == A
+ */
     public void CheckRatesPilot() {
         
        Scanner myscanner= new Scanner(System.in);
@@ -122,7 +127,7 @@ public char CheckRatesPlane(){
             }
            
         } do{
-                System.out.println("Select the pilot from this list:");
+                //System.out.println("Select the pilot from this list:");
             
                 userPilot = myscanner.nextInt();
             }while(p[userPilot].getRating()!="A");
@@ -134,7 +139,7 @@ public char CheckRatesPlane(){
                 System.out.println(i + " " + p[i].getName());
             }
        } do{
-                System.out.println("Select the pilot from this list:");
+                //System.out.println("Select the pilot from this list:");
                 userPilot = myscanner.nextInt();
             }while(p[userPilot].getRating()!="B") ;   
         break;
@@ -145,7 +150,8 @@ public char CheckRatesPlane(){
     }   
      
     /**
-     * 
+     * CreateFlight Class to create 30 flights randomly assigned fromthe arrays:
+     * flightDate[],flightOrigin [], flightDestination[], flightDepartureTime[], flightArrivalTime[]
      */
      public void createFlights(){
      
@@ -184,7 +190,11 @@ public char CheckRatesPlane(){
         }
         
     }
-     
+    /**
+     * This method CreateUserFlight allows the user to create up to 5 flight by entering information
+     * @param userName
+     * @throws ParseException 
+     */
      public void CreateUserFlight(String userName) throws ParseException{
 
         Scanner inputUserNumberOfFlight = new Scanner(System.in); 
@@ -236,7 +246,6 @@ public char CheckRatesPlane(){
             } while(j != -1);
             
             
-            
             System.out.println("Select a Plane from the list:"
                     + "\n 0 - Boeing 737"
                     + "\n 1 - Boeing 747"
@@ -247,31 +256,32 @@ public char CheckRatesPlane(){
 
             int userPlane = myScanner.nextInt() ;
 
-            CheckRatesPilot();
+            
             
             System.out.println("This airplane capacity is " + ap[userPlane].getCapacity() + " and its pilots are:" );
             
+            CheckRatesPilot();
             
 
-                Random r = new Random();
+                //Random r = new Random();
 
-                int userrfd = r.nextInt(1);
+                //int userrfd = r.nextInt(1);
 
                 //String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
                 //String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
                 //random flight Departure Time
-                int rfdt = r.nextInt(4);
+                //int rfdt = r.nextInt(4);
                 //random flight Arrival Time
-                int rfat = r.nextInt(4);
+                //int rfat = r.nextInt(4);
                 //random flight airplane
-                int rap = r.nextInt(6);
+                //int rap = r.nextInt(6);
                 //random flight pilot
-                int rp = r.nextInt(6);
+                //int rp = r.nextInt(6);
                
                Flight newFlight = new Flight(userOrigin, userDestination, userDate);
                newFlight.schedule(userTimeDeparture, userTimeArrival);
                newFlight.setPlane(getAp()[userPlane]);
-               newFlight.getPlane().assignPilot(getP()[rp].getName());
+               newFlight.getPlane().assignPilot(getP()[userPilot].getName());
                flightList.add(newFlight);
 
 
