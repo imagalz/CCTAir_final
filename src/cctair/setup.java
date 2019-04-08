@@ -218,18 +218,18 @@ public char CheckRatesPlane(){
                 //String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
                 //String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
                 //random flight Departure Time
-                //int rfdt = r.nextInt(4);
+                int rfdt = r.nextInt(4);
                 //random flight Arrival Time
-                //int rfat = r.nextInt(4);
+                int rfat = r.nextInt(4);
                 //random flight airplane
-                //int rap = r.nextInt(6);
+                int rap = r.nextInt(6);
                 //random flight pilot
-                //int rp = r.nextInt(6);
+                int rp = r.nextInt(6);
                
                Flight newFlight = new Flight(userOrigin, userDestination, userDate);
                //newflight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
                newFlight.setPlane(getAp()[userPlane]);
-               newFlight.getPlane().assignPilot(getP()[].getName());
+               newFlight.getPlane().assignPilot(getP()[rp].getName());
                flightList.add(newFlight);
 
 
