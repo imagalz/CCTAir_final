@@ -65,10 +65,10 @@ public class CCTAir {
         //System.out.println(fc.formatStringDate(s.getFlightList().get(0).getFlightDate()));
         fc.formatStringTime(s.getFlightList().get(0).getArrivalTime());
         
+
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("16:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("10:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("11:00"));
-        
         
         /**
          * Welcome the User

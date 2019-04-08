@@ -53,9 +53,9 @@ public class FormatClass {
     
     }
     
-    public void compareFlightTime(Date departureTime, Date arrivalTime){
+    public int compareFlightTime(Date departureTime, Date arrivalTime){
     
-        System.out.println(departureTime.compareTo(arrivalTime));
+        return departureTime.compareTo(arrivalTime);
     
     
     

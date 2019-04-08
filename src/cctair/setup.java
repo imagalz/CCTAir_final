@@ -2,7 +2,9 @@
 package cctair;
 
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -159,7 +161,7 @@ public char CheckRatesPlane(){
         
     }
      
-     public void CreateUserFlight(String userName){
+     public void CreateUserFlight(String userName) throws ParseException{
 
         Scanner inputUserNumberOfFlight = new Scanner(System.in); 
 
@@ -184,14 +186,26 @@ public char CheckRatesPlane(){
 
             String userDate = myScanner.nextLine();
             
-            System.out.println("Enter the departure time for your flight (Please use the format 24hs: 00:00");
-                        
-            String userTimeDeparture = myScanner.nextLine();
+            int j = 0;
             
-            System.out.println("Enter the arrival time for your flight (Please use the format 24hs: 00:00");
-            
-            String userTimeArrival = myScanner.nextLine();
-            
+            do{
+               try{
+                    FormatClass fc = new FormatClass();
+                    System.out.println("Enter the departure time for your flight (Please use the format 24hs: 00:00");
+                    String userTimeDeparture = myScanner.nextLine();
+
+                    System.out.println("Enter the arrival time for your flight (Please use the format 24hs: 00:00");
+                    String userTimeArrival = myScanner.nextLine();
+                    Date d1 = fc.formatStringTime(userTimeDeparture);
+                    Date d2 = fc.formatStringTime(userTimeArrival);
+                    j = fc.compareFlightTime(d1, d2);
+               }catch (Exception e) {
+                                   System.out.println("\n-------------------------------------------\n"
+                        + "-> Invalid value, please insert a numbers using the format 00:00."
+                        + "\n-> Error: " + e 
+                        + "\n-------------------------------------------\n");
+               } 
+            }while(j != -1);
             
             
             
