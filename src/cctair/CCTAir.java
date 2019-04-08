@@ -33,19 +33,18 @@ public class CCTAir {
         
         
         /**
-         * Welcome to the user Print Out
+         * Welcome to the user to the Airline Data println
          */
         System.out.println("-------------- CCTAir -------------");
         System.out.println("Welcome to the CCTAir...\n");
         System.out.println("Please, wait until the database is being preparated...\n");
-        System.out.println("...\n");
         
         /**
-         * Preparing the Database to show the flights
+         * Setup the class Setup to manipulate the Data
          */
         setup s = new setup();
         System.out.println("-------- Setup of Database --------");        
-        System.out.println("...\n");      
+        System.out.println("\n");      
         
         /**
          * Invoke methods to Create Pilots, Aircrafts and Flights from Setup Class
@@ -54,10 +53,11 @@ public class CCTAir {
         s.setP(s.createPilots());
         s.setAp(s.createAircrafts());
         s.createFlights();
-        System.out.println("\n\n\n\n");   
+        System.out.println("\n\n");   
         
         /**
-         * User Flight Creation
+         * User Flight Creation (up to 5 flight)
+         * using the number that the user has entered.
          */
         
         for (int i=0; i<s.getFlightList().size();i++){
@@ -65,23 +65,24 @@ public class CCTAir {
             System.out.println(s.getFlightList().get(i).toString());
         }
         
-        //
-        System.out.println("\n\n\n\n"); 
         FormatClass fc = new FormatClass();
         //System.out.println(fc.formatStringDate(s.getFlightList().get(0).getFlightDate()));
         fc.formatStringTime(s.getFlightList().get(0).getArrivalTime());
         
+<<<<<<< HEAD
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("16:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("10:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("11:00"));
         
         
+=======
+>>>>>>> c9ca0f451737babe852e86cec03bd341054337d7
         /**
          * Welcome the User
          */
       
        Scanner inputUserName = new Scanner(System.in);
-       System.out.println("\n\n\nWelcome to CCTAir! Please enter your full name\n");
+       System.out.println("\n\nWelcome to CCTAir! Please enter your full name\n");
        String userName = inputUserName.nextLine();       
    
        /**
