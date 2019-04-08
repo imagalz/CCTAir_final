@@ -5,8 +5,6 @@
  */
 package cctair;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -33,13 +31,17 @@ public class CCTAir {
 
         
         
-        
+        /**
+         * Welcome to the user Print Out
+         */
         System.out.println("-------------- CCTAir -------------");
         System.out.println("Welcome to the CCTAir...\n");
         System.out.println("Please, wait until the database is being preparated...\n");
         System.out.println("...\n");
         
-        
+        /**
+         * Preparing the Database to show the flights
+         */
         setup s = new setup();
         System.out.println("-------- Setup of Database --------");        
         System.out.println("...\n");      
