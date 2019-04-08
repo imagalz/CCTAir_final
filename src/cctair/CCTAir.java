@@ -74,6 +74,7 @@ public class CCTAir {
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("10:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("11:00"));
         
+
         /**
          * Welcome the User
          */
