@@ -12,6 +12,10 @@ import java.util.Scanner;
  *
  * @author Italo, Celia and Aman.
  */
+/**
+ * 
+ * Creation and instantiation of Arrays Flights, Aiplane and Pilot:
+ */
 public class setup {
     
     Flight f = new Flight("Dublin", "Nowhere", "21/02/1991");
@@ -45,6 +49,10 @@ public class setup {
         this.ap = ap;
     }
     
+    /**
+     * Creating Airplanes Array
+     * @return array ap
+     */
     public AirPlane[] createAircrafts(){
     
 
@@ -63,6 +71,10 @@ public class setup {
     
     }
     
+    /**
+     * Creating Pilot Array
+     * @return array p;
+     */
     
      public Pilot[] createPilots(){
          
@@ -85,44 +97,56 @@ public class setup {
     
     }
      
+     /**
+      * CheckRates methods for Plane and Pilots
+      * @return char A or B.
+      */
 public char CheckRatesPlane(){
    // Arrays.(array).indexOf(4);
     if (ap[1].getCapacity() >= 300){ 
       return 'A';
         }
-        else return 'B';
+    else return 'B';
 
     }
     public void CheckRatesPilot() {
         
-        
-        
-        
+       Scanner myscanner= new Scanner(System.in);
+       
         switch (CheckRatesPlane()){
         case 'A':
-            
-       
+        int userPilot;
         for(int i=0; i < p.length;i++){
             if(p[i].getRating()=="A"){
-                System.out.println(p[i].getName());
+                System.out.println(i + " " + p[i].getName());
             }
+           
+        } do{
+                System.out.println("Select the pilot from this list:");
+            
+                userPilot = myscanner.nextInt();
+            }while(p[userPilot].getRating()!="A");
         
-        }
-        
-        break;
+       break;
        case 'B': 
        for(int i=0; i < p.length;i++){
-            if(p[i].getRating()=="B "){
-                System.out.println(p[i].getName());
+            if(p[i].getRating()=="B"){
+                System.out.println(i + " " + p[i].getName());
             }
-
+       } do{
+                System.out.println("Select the pilot from this list:");
+                userPilot = myscanner.nextInt();
+            }while(p[userPilot].getRating()!="B") ;   
         break;
-        }
-
-    }
+        
+       }
+        
 
     }   
      
+    /**
+     * 
+     */
      public void createFlights(){
      
 
@@ -214,12 +238,12 @@ public char CheckRatesPlane(){
             
             
             System.out.println("Select a Plane from the list:"
-                    + "\n 1 - Boeing 737"
-                    + "\n 2 - Boeing 747"
-                    + "\n 3 - Boeing 767"
-                    + "\n 4 - Airbus 308"
-                    + "\n 5 - Airbus 350"
-                    + "\n 6 - Airbus 450" );
+                    + "\n 0 - Boeing 737"
+                    + "\n 1 - Boeing 747"
+                    + "\n 2 - Boeing 767"
+                    + "\n 3 - Airbus 308"
+                    + "\n 4 - Airbus 350"
+                    + "\n 5 - Airbus 450" );
 
             int userPlane = myScanner.nextInt() ;
 
@@ -227,10 +251,7 @@ public char CheckRatesPlane(){
             
             System.out.println("This airplane capacity is " + ap[userPlane].getCapacity() + " and its pilots are:" );
             
-
-            String userPilot = myScanner.nextLine();
             
-            System.out.println("Enter your Pilot name");
 
                 Random r = new Random();
 
