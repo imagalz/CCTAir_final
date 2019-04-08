@@ -76,7 +76,7 @@ public class setup {
         Pilot p3 = new Pilot("Aldana", "A");
         Pilot p4 = new Pilot("Celia", "B");
         Pilot p5 = new Pilot("Italo", "B");
-        Pilot p6 = new Pilot("Welligton", "B");
+        Pilot p6 = new Pilot("Aman", "B");
         
         Pilot p[] = {p1, p2, p3, p4, p5, p6};
         
@@ -87,24 +87,43 @@ public class setup {
     
     }
      
-//    public char AsignRates(){
-//        if (AirPlane[3].getCapacity => 300){ 
-//        return 'A';
-//        }
-//        else return 'B';
-//
-//    }
-//      public double AsignRatesPilot() {
-//        switch (AsignRates()){
-//        case 'A': ;
-//        break;
-//        case 'B': ;
-//        break;
-//        }
-//
-//    }
+public char CheckRatesPlane(){
+   // Arrays.(array).indexOf(4);
+    if (ap[1].getCapacity() >= 300){ 
+      return 'A';
+        }
+        else return 'B';
 
-     
+    }
+    public void CheckRatesPilot() {
+        
+        
+        
+        
+        switch (CheckRatesPlane()){
+        case 'A':
+            
+       
+        for(int i=0; i < p.length;i++){
+            if(p[i].getRating()=="A"){
+                System.out.println(p[i].getName());
+            }
+        
+        }
+        
+        break;
+       case 'B': 
+for(int i=0; i < p.length;i++){
+            if(p[i].getRating()=="B "){
+                System.out.println(p[i].getName());
+            }
+
+        break;
+        }
+
+    }
+
+    }   
      
      public void createFlights(){
      
@@ -143,14 +162,6 @@ public class setup {
         }
         
     }
-    public void TimeConverter(String userTimeDeparture){
-            String justHour = userTimeDeparture.substring(0,1);
-            int hourDeparture = Integer.parseInt(justHour);
-            int hourArrive = hourDeparture + 5;
-            String userTimeArrive = hourArrive + ":00";
-            System.out.print(userTimeArrive);
-            
-    } 
      
      public void CreateUserFlight(String userName){
 
@@ -182,21 +193,22 @@ public class setup {
             String userTimeDeparture = myScanner.nextLine();
             
             System.out.println("Select a Plane from the list:"
-                    + "\n A - Boeing 737"
-                    + "\n B - Boeing 747"
-                    + "\n C - Boeing 767"
-                    + "\n D - Airbus 308"
-                    + "\n E - Airbus 350"
-                    + "\n F - Airbus 450" );
+                    + "\n 1 - Boeing 737"
+                    + "\n 2 - Boeing 747"
+                    + "\n 3 - Boeing 767"
+                    + "\n 4 - Airbus 308"
+                    + "\n 5 - Airbus 350"
+                    + "\n 6 - Airbus 450" );
 
-            String userPlane = myScanner.nextLine();
+            int userPlane = myScanner.nextInt() ;
 //            if (userPlane == "A"){
 //                userPlane = Airplane a2;
 //                
 //            } 
-            String grade;
-            grade = "";
-            System.out.println("This airplane is grade" + grade + "and its pilots are:" );
+
+            CheckRatesPilot();
+            
+            System.out.println("This airplane capacity is " + ap[userPlane].getCapacity() + " and its pilots are:" );
 
             
                 Random r = new Random();
