@@ -63,8 +63,10 @@ public class CCTAir {
         }
         
         //
+        System.out.println("\n\n\n\n"); 
         FormatClass fc = new FormatClass();
-        System.out.println(fc.format(s.getFlightList().get(0).getFlightDate()));
+        //System.out.println(fc.formatStringDate(s.getFlightList().get(0).getFlightDate()));
+        fc.formatStringTime(s.getFlightList().get(0).getArrivalTime());
         
         
         /**

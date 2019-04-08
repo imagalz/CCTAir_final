@@ -20,7 +20,7 @@ public class Aircraft {
     String model = "";
     
     /**
-     * Aircraft contructor parameters:
+     * Aircraft constructor parameters:
      * @param brand
      * @param model
      * @param capacity 

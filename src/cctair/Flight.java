@@ -78,7 +78,7 @@ public class Flight {
     public void setFlightDate(String flightDate) {
         FormatClass fc = new FormatClass();
         
-        this.flightDate = fc.format(flightDate);
+        this.flightDate = fc.formatStringDate(flightDate);
     }
 
     public AirPlane getPlane() {

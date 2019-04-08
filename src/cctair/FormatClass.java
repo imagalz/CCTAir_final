@@ -15,7 +15,7 @@ import java.util.Date;
 public class FormatClass {
 
         
-    public String format(String dateString){
+    public String formatStringDate(String dateString){
     
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         String dateInString = dateString;
@@ -32,6 +32,25 @@ public class FormatClass {
         }
        return dateInString; 
     }
+    
+    // Convert String to time and returning 
+    public void formatStringTime(String timeString){
+
+        Date date = new Date();
+        SimpleDateFormat sdf;
+        sdf = new SimpleDateFormat("hh:mm:ss");
+        System.out.println(sdf.format(date));
+        
+        date.get
+        //sdf = new SimpleDateFormat("dd MMM yyyy hh:mm:ss zzz");
+        //System.out.println(sdf.format(date));
+        //sdf = new SimpleDateFormat("E MMM dd yyyy");
+        //System.out.println(sdf.format(date));
+
+    
+    
+    }
+    
 }
 
 
