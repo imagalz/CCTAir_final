@@ -113,7 +113,7 @@ public char CheckRatesPlane(){
         
         break;
        case 'B': 
-for(int i=0; i < p.length;i++){
+       for(int i=0; i < p.length;i++){
             if(p[i].getRating()=="B "){
                 System.out.println(p[i].getName());
             }
@@ -201,16 +201,16 @@ for(int i=0; i < p.length;i++){
                     + "\n 6 - Airbus 450" );
 
             int userPlane = myScanner.nextInt() ;
-//            if (userPlane == "A"){
-//                userPlane = Airplane a2;
-//                
-//            } 
 
             CheckRatesPilot();
             
             System.out.println("This airplane capacity is " + ap[userPlane].getCapacity() + " and its pilots are:" );
-
             
+
+            String userPilot = myScanner.nextLine();
+            
+            System.out.println("Enter your Pilot name");
+
                 Random r = new Random();
 
                 int userrfd = r.nextInt(1);
@@ -218,18 +218,18 @@ for(int i=0; i < p.length;i++){
                 //String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
                 //String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
                 //random flight Departure Time
-                int rfdt = r.nextInt(4);
+                //int rfdt = r.nextInt(4);
                 //random flight Arrival Time
-                int rfat = r.nextInt(4);
+                //int rfat = r.nextInt(4);
                 //random flight airplane
-                int rap = r.nextInt(6);
+                //int rap = r.nextInt(6);
                 //random flight pilot
-                int rp = r.nextInt(6);
+                //int rp = r.nextInt(6);
                
                Flight newFlight = new Flight(userOrigin, userDestination, userDate);
                //newflight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
-               newFlight.setPlane(getAp()[rap]);
-               newFlight.getPlane().assignPilot(getP()[rp].getName());
+               newFlight.setPlane(getAp()[userPlane]);
+               newFlight.getPlane().assignPilot(getP()[].getName());
                flightList.add(newFlight);
 
 
