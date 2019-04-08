@@ -1,19 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cctair;
-
-import java.sql.Time;
-import java.util.Date;
-import java.time.LocalDateTime;
-
-
 
 /**
  *
- * @author Italo Marcius
+ * @author Italo, Celia and Aman
  */
 public class Flight {
 /**
@@ -37,6 +27,11 @@ public class Flight {
   * each relevant instance variable accordingly.
   */  
 
+    public Flight(){
+    }
+    
+    
+    
     public Flight(String origin, String destination, String flightDate) {
         this.origin = origin;
         this.destination = destination;
