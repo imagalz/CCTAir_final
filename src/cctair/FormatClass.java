@@ -1,16 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cctair;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- *
- * @author Italo Marcius
+ * @author Italo, Celia and Aman
+ */
+
+/**
+ * Format class to convert a String in Time or Data.
  */
 public class FormatClass {
 

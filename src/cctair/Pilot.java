@@ -4,15 +4,16 @@
  */
 package cctair;
 
-import java.util.ArrayList;
-
 /**
  *
- * @author Celia, the naughty Peaky Blinder!
+ * @author Italo, Celia and Aman.
  */
 public class Pilot {
    /**
-     * Set up the variable to Pilot object
+     * Class for Objet Pilot
+     * String name
+     * String rating
+     * as parameters for Pilot.
    */
     
    String name;
@@ -24,7 +25,10 @@ public class Pilot {
     }
    
    
-   
+   /**
+    * Getter and Setters for the Parameters 
+    * @return name and rating
+    */
     public String getName() {
         return name;
     }
