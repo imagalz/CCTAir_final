@@ -45,7 +45,7 @@ public class CCTAir {
         System.out.println("...\n");      
         
         /**
-         * Invoque methods to Create Pilots, Aircrafts and Flights from Setup Class
+         * Invoke methods to Create Pilots, Aircrafts and Flights from Setup Class
          */
         
         s.setP(s.createPilots());
@@ -61,6 +61,12 @@ public class CCTAir {
             
             System.out.println(s.getFlightList().get(i).toString());
         }
+        
+        //
+        FormatClass fc = new FormatClass();
+        System.out.println(fc.format(s.getFlightList().get(0).getFlightDate()));
+        
+        
         /**
          * Welcome the User
          */
@@ -70,7 +76,7 @@ public class CCTAir {
        String userName = inputUserName.nextLine();       
    
        /**
-        * Invoque method to allow the user to create up to 5 flights, Method name CreateUserFlight, located in Setup class
+        * Invoke method to allow the user to create up to 5 flights, Method name CreateUserFlight, located in Setup class
         */
        s.CreateUserFlight(userName);
         
