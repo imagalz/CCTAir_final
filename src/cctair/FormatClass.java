@@ -34,19 +34,30 @@ public class FormatClass {
     }
     
     // Convert String to time and returning 
-    public void formatStringTime(String timeString){
+    public Date formatStringTime(String timeString) throws ParseException{
 
         Date date = new Date();
-        SimpleDateFormat sdf;
-        sdf = new SimpleDateFormat("hh:mm:ss");
-        System.out.println(sdf.format(date));
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+        date = sdf.parse(timeString);
         
-        date.get
+      
+        //System.out.println(sdf.format(date));
+        return date;
+        
+        
         //sdf = new SimpleDateFormat("dd MMM yyyy hh:mm:ss zzz");
         //System.out.println(sdf.format(date));
         //sdf = new SimpleDateFormat("E MMM dd yyyy");
         //System.out.println(sdf.format(date));
 
+    
+    
+    }
+    
+    public void compareFlightTime(Date departureTime, Date arrivalTime){
+    
+        System.out.println(departureTime.compareTo(arrivalTime));
+    
     
     
     }

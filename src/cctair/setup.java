@@ -192,6 +192,13 @@ public char CheckRatesPlane(){
                         
             String userTimeDeparture = myScanner.nextLine();
             
+            System.out.println("Enter the arrival time for your flight (Please use the format 24hs: 00:00");
+            
+            String userTimeArrival = myScanner.nextLine();
+            
+            
+            
+            
             System.out.println("Select a Plane from the list:"
                     + "\n 1 - Boeing 737"
                     + "\n 2 - Boeing 747"

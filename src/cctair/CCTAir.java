@@ -5,6 +5,7 @@
  */
 package cctair;
 
+import java.text.ParseException;
 import java.util.Scanner;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Scanner;
 public class CCTAir {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 /**
  * Airline Logo
  */
@@ -69,6 +70,10 @@ public class CCTAir {
         FormatClass fc = new FormatClass();
         //System.out.println(fc.formatStringDate(s.getFlightList().get(0).getFlightDate()));
         fc.formatStringTime(s.getFlightList().get(0).getArrivalTime());
+        
+        fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("16:00"));
+        fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("10:00"));
+        fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("11:00"));
         
         
         /**
