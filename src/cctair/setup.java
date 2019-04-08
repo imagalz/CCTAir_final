@@ -233,7 +233,7 @@ public char CheckRatesPlane(){
                         + "\n-> Error: " + e 
                         + "\n-------------------------------------------\n");
                } 
-            }while(j != -1);
+            } while(j != -1);
             
             
             
