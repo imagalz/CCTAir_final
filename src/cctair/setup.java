@@ -185,20 +185,24 @@ public char CheckRatesPlane(){
             System.out.println("\n- Enter the flight date (Please use the format: dd/mm/yy)");
 
             String userDate = myScanner.nextLine();
+            String userTimeDeparture;
+            String userTimeArrival;
             
             int j = 0;
             
             do{
-               try{
                     FormatClass fc = new FormatClass();
                     System.out.println("Enter the departure time for your flight (Please use the format 24hs: 00:00");
-                    String userTimeDeparture = myScanner.nextLine();
+                    userTimeDeparture = myScanner.nextLine();
 
                     System.out.println("Enter the arrival time for your flight (Please use the format 24hs: 00:00");
-                    String userTimeArrival = myScanner.nextLine();
+                    userTimeArrival = myScanner.nextLine();
                     Date d1 = fc.formatStringTime(userTimeDeparture);
-                    Date d2 = fc.formatStringTime(userTimeArrival);
+                    Date d2 = fc.formatStringTime(userTimeArrival); 
+               try{
+
                     j = fc.compareFlightTime(d1, d2);
+                    //System.out.println(j);
                }catch (Exception e) {
                                    System.out.println("\n-------------------------------------------\n"
                         + "-> Invalid value, please insert a numbers using the format 00:00."
@@ -244,7 +248,7 @@ public char CheckRatesPlane(){
                 int rp = r.nextInt(6);
                
                Flight newFlight = new Flight(userOrigin, userDestination, userDate);
-               //newflight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
+               newFlight.schedule(userTimeDeparture, userTimeArrival);
                newFlight.setPlane(getAp()[userPlane]);
                newFlight.getPlane().assignPilot(getP()[rp].getName());
                flightList.add(newFlight);
