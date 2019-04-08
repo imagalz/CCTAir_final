@@ -69,14 +69,11 @@ public class CCTAir {
         //System.out.println(fc.formatStringDate(s.getFlightList().get(0).getFlightDate()));
         fc.formatStringTime(s.getFlightList().get(0).getArrivalTime());
         
-<<<<<<< HEAD
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("16:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("10:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("11:00"));
         
         
-=======
->>>>>>> c9ca0f451737babe852e86cec03bd341054337d7
         /**
          * Welcome the User
          */
