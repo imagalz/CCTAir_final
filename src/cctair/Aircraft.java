@@ -7,7 +7,10 @@ package cctair;
 
 /**
  *
- * @author Eoin
+ * @author 
+ */
+/**
+ * Super Class Aircraft:
  */
 public class Aircraft {
 
@@ -16,12 +19,23 @@ public class Aircraft {
     int capacity = 0;
     String model = "";
     
+    /**
+     * Aircraft contructor parameters:
+     * @param brand
+     * @param model
+     * @param capacity 
+     */
+    
     public Aircraft (String brand, String model, int capacity) {
         this.brand = brand;
         this.model = model;
         this.capacity = capacity;
     }
 
+    /**
+     * Getter and Setters for String Brand
+     * @return 
+     */
 
     public String getBrand() {
         return brand;
@@ -30,7 +44,10 @@ public class Aircraft {
     public void setBrand(String brand) {
         this.brand = brand;
     }
-
+/**
+ * Getter and Setter for String Model
+ * @return 
+ */
     public String getModel() {
         return model;
     }
@@ -38,7 +55,10 @@ public class Aircraft {
     public void setModel(String model) {
         this.model = model;
     }
-
+/**
+ * Getters and Setters for int Capacity.
+ * @return 
+ */
     public int getCapacity() {
         return capacity;
     }
