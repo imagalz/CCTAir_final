@@ -14,9 +14,9 @@ public class Pilot {
    */
     
    String name;
-   String rating;
+   char rating;
 
-    public Pilot(String name, String rating) {
+    public Pilot(String name, char rating) {
         this.name = name;
         this.rating = rating;
     }
@@ -34,11 +34,11 @@ public class Pilot {
         this.name = name;
     }
 
-    public String getRating() {
+    public char getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(char rating) {
         this.rating = rating;
     }
 

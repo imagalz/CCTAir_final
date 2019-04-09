@@ -77,12 +77,12 @@ public class setup {
 
         System.out.println("--------- Creating Pilots ---------");
 
-        Pilot p1 = new Pilot("Fabricio", "A");
-        Pilot p2 = new Pilot("Fermin", "A");
-        Pilot p3 = new Pilot("Aldana", "A");
-        Pilot p4 = new Pilot("Celia", "B");
-        Pilot p5 = new Pilot("Italo", "B");
-        Pilot p6 = new Pilot("Aman", "B");
+        Pilot p1 = new Pilot("Fabricio", 'A');
+        Pilot p2 = new Pilot("Fermin", 'A');
+        Pilot p3 = new Pilot("Aldana", 'A');
+        Pilot p4 = new Pilot("Celia", 'B');
+        Pilot p5 = new Pilot("Italo", 'B');
+        Pilot p6 = new Pilot("Aman", 'B');
 
         Pilot p[] = {p1, p2, p3, p4, p5, p6};
 
@@ -98,8 +98,8 @@ public class setup {
      * @return char A or B depending on the capacity of the Airplane.
      *
      */
-    public char CheckRatesPlane() {
-        if (ap[1].getCapacity() >= 300) {
+    public char CheckRatesPlane(int userPlane) {
+        if (ap[userPlane].getCapacity() >= 300) {
             return 'A';
         } else {
             return 'B';
@@ -110,41 +110,39 @@ public class setup {
     /**
      * Check the Rate for Pilot, searching in Array p[2] .gettingRatting == A
      */
-    public int CheckRatesPilot() {
+    public int CheckRatesPilot(char planeRating) {
 
         Scanner myscanner = new Scanner(System.in);
         int userPilot = 0;
-
-        if(CheckRatesPlane() == 'A') {
+        System.out.println(planeRating);
+        if(planeRating == 'A') {
             
                 
                 for (int i = 0; i < p.length; i++) {
-                    if (p[i].getRating() == "A") {
+                    if (p[i].getRating() == 'A') {
                         System.out.println(i + " " + p[i].getName());
                     }
 
                 }
                 do {
-                    //System.out.println("Select the pilot from this list:");
+                    System.out.println("Select the pilot from this list:");
 
                     userPilot = myscanner.nextInt();
-                } while (p[userPilot].getRating() != "A");
+                } while (p[userPilot].getRating() != 'A');
 
-        } if (CheckRatesPlane() == 'B'){    
+        } else if (planeRating == 'B'){    
             
                 for (int i = 0; i < p.length; i++) {
-                    if (p[i].getRating() == "B") {
+                    if (p[i].getRating() == 'B') {
                         System.out.println(i + " " + p[i].getName());
                     }
                 }
                 do {
                     //System.out.println("Select the pilot from this list:");
                     userPilot = myscanner.nextInt();
-                } while (p[userPilot].getRating() != "B");
+                } while (p[userPilot].getRating() != 'B');
                 
                 
-        } else {
-            CheckRatesPilot();
         }
         return userPilot;
     }
@@ -182,8 +180,8 @@ public class setup {
 
             Flight flight = new Flight(flightOrigin[rfo], flightDestination[rpd], flightDate[rfd]);
             flight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
-            flight.setPlane(getAp()[rap]);
-            flight.getPlane().assignPilot(getP()[rp].getName());
+            flight.setPlane(getAp()[rap]);            flight.getPlane().assignPilot(getP()[rp].getName());
+
             flightList.add(flight);
 
         }
@@ -228,9 +226,10 @@ public class setup {
             String userDestination = myScanner.nextLine();
             
             boolean checkDate = false;
+            String userDate;
             do {
                 System.out.println("\n- Enter the flight date (Please use the format: dd/mm/yy)");
-                String userDate = myScanner.nextLine();
+                userDate = myScanner.nextLine();
                 checkDate = fc.validateDate(userDate);
             } while (!checkDate);
 
@@ -273,7 +272,7 @@ public class setup {
             System.out.println("This airplane capacity is " + ap[userPlane].getCapacity());
             
             
-            int userPilot = CheckRatesPilot();
+            int userPilot = CheckRatesPilot(CheckRatesPlane(userPlane));
 
 
             Flight newFlight = new Flight(userOrigin, userDestination, userDate);
