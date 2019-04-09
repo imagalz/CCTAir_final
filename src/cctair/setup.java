@@ -110,13 +110,14 @@ public class setup {
     /**
      * Check the Rate for Pilot, searching in Array p[2] .gettingRatting == A
      */
-    public void CheckRatesPilot() {
+    public int CheckRatesPilot() {
 
         Scanner myscanner = new Scanner(System.in);
+        int userPilot = 0;
 
-        switch (CheckRatesPlane()) {
-            case 'A':
-                int userPilot;
+        if(CheckRatesPlane() == 'A') {
+            
+                
                 for (int i = 0; i < p.length; i++) {
                     if (p[i].getRating() == "A") {
                         System.out.println(i + " " + p[i].getName());
@@ -129,8 +130,8 @@ public class setup {
                     userPilot = myscanner.nextInt();
                 } while (p[userPilot].getRating() != "A");
 
-                break;
-            case 'B':
+        } if (CheckRatesPlane() == 'B'){    
+            
                 for (int i = 0; i < p.length; i++) {
                     if (p[i].getRating() == "B") {
                         System.out.println(i + " " + p[i].getName());
@@ -140,10 +141,12 @@ public class setup {
                     //System.out.println("Select the pilot from this list:");
                     userPilot = myscanner.nextInt();
                 } while (p[userPilot].getRating() != "B");
-                break;
-
+                
+                
+        } else {
+            CheckRatesPilot();
         }
-
+        return userPilot;
     }
 
     /**
@@ -267,22 +270,12 @@ public class setup {
 
             int userPlane = myScanner.nextInt();
 
-            System.out.println("This airplane capacity is " + ap[userPlane].getCapacity() + " and its pilots are:");
+            System.out.println("This airplane capacity is " + ap[userPlane].getCapacity());
+            
+            
+            int userPilot = CheckRatesPilot();
 
-            CheckRatesPilot();
 
-            //Random r = new Random();
-            //int userrfd = r.nextInt(1);
-            //String flightDepartureTime[] = {"1:30", "2:00", "2:30", "3:00"};
-            //String flightarrivalTime[] = {"15:30", "17:00", "17:30", "18:00"};
-            //random flight Departure Time
-            //int rfdt = r.nextInt(4);
-            //random flight Arrival Time
-            //int rfat = r.nextInt(4);
-            //random flight airplane
-            //int rap = r.nextInt(6);
-            //random flight pilot
-            //int rp = r.nextInt(6);
             Flight newFlight = new Flight(userOrigin, userDestination, userDate);
             newFlight.schedule(userTimeDeparture, userTimeArrival);
             newFlight.setPlane(getAp()[userPlane]);
