@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class setup {
 
-    Flight f = new Flight("Dublin", "Nowhere", "21/02/1991");
+    Flight f = new Flight();
     ArrayList<Flight> flightList = new ArrayList<Flight>();
     AirPlane ap[];
     Pilot p[];
