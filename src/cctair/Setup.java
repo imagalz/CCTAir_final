@@ -12,9 +12,9 @@ import java.util.Scanner;
  */
 /**
  *
- * Creation and instantiation of Arrays Flights, Aiplane and Pilot:
+ * Creation and instantiation of Arrays Flights, Airplane and Pilot:
  */
-public class setup {
+public class Setup {
 
     Flight f = new Flight();
     ArrayList<Flight> flightList = new ArrayList<Flight>();
