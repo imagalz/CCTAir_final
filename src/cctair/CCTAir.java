@@ -1,6 +1,7 @@
 
 package cctair;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ import java.util.Scanner;
 public class CCTAir {
 
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException, IOException {
 /**
  * Airline Logo
  */
@@ -38,7 +39,7 @@ public class CCTAir {
         /**
          * Setup the class Setup to manipulate the Data
          */
-        setup s = new setup();
+        Setup s = new Setup();
         System.out.println("-------- Setup of Database --------");        
         System.out.println("\n");      
         
@@ -70,7 +71,15 @@ public class CCTAir {
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("10:00"));
         fc.compareFlightTime(fc.formatStringTime("11:00"), fc.formatStringTime("11:00"));
         
+        
+        //TESTING THE FILE WRITER
+        Data d = new Data();
+        String flightDate[] = {"27/03/2019", "28/03/2019", "29/03/2019", "30/03/2019", "31/03/2019", "01/04/2019"};
+        d.fileWriterBuffered(flightDate);
 
+        
+        
+        
         /**
          * Welcome the User
          */
