@@ -30,21 +30,16 @@ public class FormatClass {
         }
         return dateInString;
     }
-
-    // Convert String to time and returning 
+/**
+ * Formating String to Time
+ */
     public Date formatStringTime(String timeString) throws ParseException {
 
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
         date = sdf.parse(timeString);
-
-        //System.out.println(sdf.format(date));
         return date;
 
-        //sdf = new SimpleDateFormat("dd MMM yyyy hh:mm:ss zzz");
-        //System.out.println(sdf.format(date));
-        //sdf = new SimpleDateFormat("E MMM dd yyyy");
-        //System.out.println(sdf.format(date));
     }
 
     public int compareFlightTime(Date departureTime, Date arrivalTime) {
@@ -52,12 +47,18 @@ public class FormatClass {
         return departureTime.compareTo(arrivalTime);
 
     }
-
+/**
+ * Boolean method to validate the Date
+ * @param date
+ * @return 
+ */
     public boolean validateDate(String date) {
 
-        //String s = "31/02/2009";
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        df.setLenient(false); // aqui o pulo do gato
+        /**
+         * If the date is not valid
+         */
+        df.setLenient(false); 
         try {
             Date currentDate = new Date();
             if (df.parse(date).before(currentDate)) {
@@ -67,7 +68,9 @@ public class FormatClass {
                 return false;
             }
 
-            // data válida
+        /**
+         * If the date is valid
+         */
         } catch (ParseException ex) {
             // data inválida
             System.out.println("\n-------------------------------------------\n"

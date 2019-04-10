@@ -180,7 +180,7 @@ public class setup {
 
             Flight flight = new Flight(flightOrigin[rfo], flightDestination[rpd], flightDate[rfd]);
             flight.schedule(flightarrivalTime[rfat], flightDepartureTime[rfdt]);
-            flight.setPlane(getAp()[rap]);            flight.getPlane().assignPilot(getP()[rp].getName());
+            flight.setPlane(getAp()[rap]); flight.getPlane().assignPilot(getP()[rp].getName());
 
             flightList.add(flight);
 
