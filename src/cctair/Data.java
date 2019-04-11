@@ -8,6 +8,7 @@ package cctair;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -26,7 +27,36 @@ public class Data {
     AirPlane ap[];
     Pilot p[];
 
-    public void writeFile() throws IOException {
+    String flightDate[] = {"27/03/2019", "28/03/2019", "29/03/2019", "30/03/2019", "31/03/2019", "01/04/2019"};
+    String flightOrigin[] = {"Dublin", "London", "Paris", "Edinburgh", "Rome", "Berlin"};
+    String flightDestination[] = {"Salvador", "Montevideo", "Buenos Aires", "Lima", "Barcelona", "Athenas"};
+    String flightDepartureTime[] = {"01:30", "02:00", "02:30", "03:00"};
+    String flightarrivalTime[] = {"13:30", "15:00", "15:30", "16:00"};
+
+    public Data() {
+    }
+
+    public String[] getFlightDate() {
+        return flightDate;
+    }
+
+    public String[] getFlightOrigin() {
+        return flightOrigin;
+    }
+
+    public String[] getFlightDestination() {
+        return flightDestination;
+    }
+
+    public String[] getFlightDepartureTime() {
+        return flightDepartureTime;
+    }
+
+    public String[] getFlightarrivalTime() {
+        return flightarrivalTime;
+    }
+
+    /*public void writeFile() throws IOException {
         File fileToBeModified = new File("list.txt");
 
         String oldContent = "";
@@ -65,11 +95,16 @@ public class Data {
                 e.printStackTrace();
             }
         }
-    }
+    }*/
 
-    public void fileWriterBuffered(String s[]) throws IOException {
+    public void fileWriterBuffered(String s[], String fname) throws IOException {
 
-        FileWriter fw = new FileWriter("C:\\Users\\Italo Marcius\\Documents\\NetBeansProjects\\CCTAir\\TestFile.txt");
+        String fileName = "";
+        fileName = fileName.concat(fname);
+        fileName = fileName.concat(".txt");
+        System.out.println("\n" + fileName);
+
+        FileWriter fw = new FileWriter(fileName);
         BufferedWriter WriteFileBuffer = new BufferedWriter(fw);
 
         for (int i = 0; i < s.length; i++) {
@@ -79,6 +114,28 @@ public class Data {
         //Sample 03: Close both the Writers
         WriteFileBuffer.close();
         System.out.println("HERE!");
+
+    }
+
+    public void fileReaderBuffered(String fname) throws FileNotFoundException, IOException {
+
+        String fileName = "";
+        fileName = fileName.concat(fname);
+        fileName = fileName.concat(".txt");
+        FileReader fr = new FileReader(fileName);
+
+        BufferedReader ReadFileBuffer = new BufferedReader(fr);
+
+        //Sample 05: Read the text Written 
+        // using BufferedWriter
+        String st = "";
+        while (ReadFileBuffer.readLine() != null){
+            
+        System.out.println(ReadFileBuffer.readLine());
+        }
+        
+        //Sample 06: Close the Readers
+        ReadFileBuffer.close();
 
     }
 }

@@ -73,9 +73,16 @@ public class CCTAir {
         
         //TESTING THE FILE WRITER
         Data d = new Data();
-        String flightDate[] = {"27/03/2019", "28/03/2019", "29/03/2019", "30/03/2019", "31/03/2019", "01/04/2019"};
-        d.fileWriterBuffered(flightDate);
 
+        d.fileWriterBuffered(d.getFlightDate(), "flightDates");
+        d.fileWriterBuffered(d.getFlightOrigin(), "origins");
+        d.fileWriterBuffered(d.getFlightDestination(), "destinations");
+        d.fileWriterBuffered(d.getFlightDepartureTime(), "departureTimes");
+        d.fileWriterBuffered(d.getFlightarrivalTime(), "arrivalTimes");
+        
+        d.fileReaderBuffered("origins");
+        
+        
         
         
         
