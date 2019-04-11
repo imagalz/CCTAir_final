@@ -78,6 +78,16 @@ public class CCTAir {
         d.PilotfileWriterBuffered(s.getP());
         d.PiloFileReadBuffered();
 
+
+        d.fileWriterBuffered(d.getFlightDate(), "flightDates");
+        d.fileWriterBuffered(d.getFlightOrigin(), "origins");
+        d.fileWriterBuffered(d.getFlightDestination(), "destinations");
+        d.fileWriterBuffered(d.getFlightDepartureTime(), "departureTimes");
+        d.fileWriterBuffered(d.getFlightarrivalTime(), "arrivalTimes");
+        
+        d.fileReaderBuffered("origins");
+        
+        
         
         
         

@@ -9,6 +9,6 @@ package cctair;
  *
  * @author Italo Marcius
  */
-public class Scaner {
+public class Scanner {
     
 }
