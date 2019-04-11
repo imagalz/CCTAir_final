@@ -74,7 +74,9 @@ public class CCTAir {
         //TESTING THE FILE WRITER
         Data d = new Data();
         String flightDate[] = {"27/03/2019", "28/03/2019", "29/03/2019", "30/03/2019", "31/03/2019", "01/04/2019"};
-        d.fileWriterBuffered(flightDate);
+        //d.fileWriterBuffered(flightDate);
+        d.PilotfileWriterBuffered(s.getP());
+        d.PiloFileReadBuffered();
 
         
         

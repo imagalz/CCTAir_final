@@ -47,8 +47,7 @@ public class Data {
                 line = reader.readLine();
             }
 
-            String newContent = oldContent.replaceAll(oldString, newString);
-
+//            String newContent = oldContent.replaceAll(oldString, newString);
             //Replacing the specific line with new data 
             writer = new FileWriter(fileToBeModified);
 
@@ -66,19 +65,52 @@ public class Data {
             }
         }
     }
-    
-    public void fileWriterBuffered(String s[]) throws IOException{
-        
-            FileWriter fw = new FileWriter("C:\\Users\\Italo Marcius\\Documents\\NetBeansProjects\\CCTAir\\TestFile.txt");
-            BufferedWriter WriteFileBuffer = new BufferedWriter(fw);
-            
-            for(int i=0; i<s.length; i++){
-                WriteFileBuffer.write(s[i]);
-                WriteFileBuffer.newLine();
-            }
-            //Sample 03: Close both the Writers
-            WriteFileBuffer.close();
-            System.out.println("HERE!");
-    
+
+    public void fileWriterBuffered(String s[]) throws IOException {
+
+        FileWriter fw = new FileWriter("C:\\Users\\Italo Marcius\\Documents\\NetBeansProjects\\CCTAir\\TestFile.txt");
+        BufferedWriter WriteFileBuffer = new BufferedWriter(fw);
+
+        for (int i = 0; i < s.length; i++) {
+            WriteFileBuffer.write(s[i]);
+            WriteFileBuffer.newLine();
+        }
+        //Sample 03: Close both the Writers
+        WriteFileBuffer.close();
+        System.out.println("HERE!");
+
     }
+
+    public void PilotfileWriterBuffered(Pilot p[]) throws IOException {
+
+        FileWriter fw = new FileWriter("C:\\Users\\Eoin\\Documents\\NetBeansProjects\\CCTAir\\files\\TestFile.txt");
+        BufferedWriter WriteFileBuffer = new BufferedWriter(fw);
+
+        for (int i = 0; i < p.length; i++) {
+            WriteFileBuffer.write(p[i].getName()); //where method get value to write down
+            WriteFileBuffer.write(" , "); //where method get value to write down
+            WriteFileBuffer.write(p[i].getRating());
+            WriteFileBuffer.newLine();
+        }
+        //Sample 03: Close both the Writers
+        WriteFileBuffer.close();
+        System.out.println("HERE!");
+
+    }
+
+    public void PiloFileReadBuffered() throws IOException {
+        //Sample 04: Open the Readers Now
+        //Sample 04: Open the Readers Now
+        FileReader fr = new FileReader("C:\\Users\\Eoin\\Documents\\NetBeansProjects\\CCTAir\\files\\TestFile.txt");
+        BufferedReader ReadFileBuffer = new BufferedReader(fr);
+
+        //Sample 05: Read the text Written 
+        // using BufferedWriter
+        String st;
+        while ((st = ReadFileBuffer.readLine()) != null) {
+            System.out.println(st);
+        }
+
+    }
+
 }
