@@ -66,19 +66,19 @@ public class Data {
             }
         }
     }
-    
-    public void fileWriterBuffered(String s[]) throws IOException{
-        
-            FileWriter fw = new FileWriter("C:\\Users\\Italo Marcius\\Documents\\NetBeansProjects\\CCTAir\\TestFile.txt");
-            BufferedWriter WriteFileBuffer = new BufferedWriter(fw);
-            
-            for(int i=0; i<s.length; i++){
-                WriteFileBuffer.write(s[i]);
-                WriteFileBuffer.newLine();
-            }
-            //Sample 03: Close both the Writers
-            WriteFileBuffer.close();
-            System.out.println("HERE!");
-    
+
+    public void fileWriterBuffered(String s[]) throws IOException {
+
+        FileWriter fw = new FileWriter("C:\\Users\\Italo Marcius\\Documents\\NetBeansProjects\\CCTAir\\TestFile.txt");
+        BufferedWriter WriteFileBuffer = new BufferedWriter(fw);
+
+        for (int i = 0; i < s.length; i++) {
+            WriteFileBuffer.write(s[i]);
+            WriteFileBuffer.newLine();
+        }
+        //Sample 03: Close both the Writers
+        WriteFileBuffer.close();
+        System.out.println("HERE!");
+
     }
 }
